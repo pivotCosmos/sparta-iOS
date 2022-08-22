@@ -9,31 +9,39 @@ import UIKit
 
 class ColorPaletteViewController: UIViewController {
 
+    @IBOutlet weak var bleachNumberText: UITextField!
+    @IBOutlet weak var bleachStepper: UIStepper!
     
-    @IBOutlet var paletteImages: [UIImageView]!
+    @IBOutlet weak var dyeNumberText: UITextField!
+    @IBOutlet weak var dyeStepper: UIStepper!
     
-    @IBOutlet weak var colorPickLabel: UILabel!
-    
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var stepper: UIStepper!
-    
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-        print("Do Something")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let tapImageViewRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        for palette in paletteImages {
-            palette.isUserInteractionEnabled = true
-            palette.addGestureRecognizer(tapImageViewRecognizer)
-        }
         
     }
     
-
+    @IBAction func bleachEditingChanged(_ sender: Any) {
+        let bleachNumber = bleachNumberText.text ?? ""
+        bleachStepper.value = Double(bleachNumber) ?? 0
+    }
+    
+    @IBAction func bleachStepperValueChanged(_ sender: Any) {
+        let bleachNumber = bleachStepper.value
+        bleachNumberText.text = String(Int(bleachNumber))
+    }
+    
+    @IBAction func dyeEditingChanged(_ sender: Any) {
+        let dyeNumber = dyeNumberText.text ?? ""
+        dyeStepper.value = Double(dyeNumber) ?? 0
+    }
+    @IBAction func dyeStepperValueChanged(_ sender: Any) {
+        let dyeNumber = dyeStepper.value
+        dyeNumberText.text = String(Int(dyeNumber))
+    }
+    
     
     // MARK: - Navigation
 
