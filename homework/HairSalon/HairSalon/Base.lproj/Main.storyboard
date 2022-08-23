@@ -47,7 +47,7 @@
                                     <segue destination="dbO-Od-oTM" kind="presentation" id="wqZ-ee-qF7"/>
                                 </connections>
                             </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-i3-FPE">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="P9u-i3-FPE">
                                 <rect key="frame" x="296" y="725" width="94" height="32"/>
                                 <color key="backgroundColor" red="0.2552499272" green="0.043282651060000003" blue="0.63402639250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -62,7 +62,7 @@
                                     <action selector="bleachEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="jnI-Jo-0LN"/>
                                 </connections>
                             </textField>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="KTg-sl-fVe">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="KTg-sl-fVe">
                                 <rect key="frame" x="296" y="609" width="94" height="32"/>
                                 <color key="backgroundColor" red="0.2552499272" green="0.043282651060000003" blue="0.63402639250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -114,6 +114,7 @@
                         <outlet property="bleachStepper" destination="KTg-sl-fVe" id="D0T-sa-Jw9"/>
                         <outlet property="dyeNumberText" destination="ilr-qX-psE" id="xB0-ly-mjK"/>
                         <outlet property="dyeStepper" destination="P9u-i3-FPE" id="shx-hX-sao"/>
+                        <outlet property="nextButton" destination="XmA-sj-Xqa" id="vId-dV-CDL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -150,6 +151,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="dbO-Od-oTM" eventType="touchUpInside" id="3Jq-9A-j5Y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AZm-Xv-o8f"/>
@@ -165,6 +169,10 @@
                             <constraint firstItem="AZm-Xv-o8f" firstAttribute="trailing" secondItem="ZVg-vl-0WO" secondAttribute="trailing" constant="24" id="vUg-Tq-9Wy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chargeButton" destination="ZVg-vl-0WO" id="cmE-TM-2qb"/>
+                        <outlet property="receiptLabel" destination="rEY-Bp-Fv3" id="4aK-Uf-OYG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Am0-tX-04A" sceneMemberID="firstResponder"/>
             </objects>

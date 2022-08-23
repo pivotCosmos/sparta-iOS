@@ -15,11 +15,13 @@ class ColorPaletteViewController: UIViewController {
     @IBOutlet weak var dyeNumberText: UITextField!
     @IBOutlet weak var dyeStepper: UIStepper!
     
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.nextButton.layer.cornerRadius = 10
         
     }
     
@@ -49,6 +51,13 @@ class ColorPaletteViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let controller = segue.destination as? ReceiptViewController{
+            
+            controller.bleachNumber = Int(bleachStepper.value)
+            controller.dyeNumber = Int(dyeStepper.value)
+            
+        }
+        
     }
     
 
