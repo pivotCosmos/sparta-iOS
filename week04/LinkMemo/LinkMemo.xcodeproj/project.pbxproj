@@ -19,6 +19,7 @@
 		96008F5128BC597B0032C4B3 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 96008F5028BC597B0032C4B3 /* SwiftyJSON */; };
 		96008F5528BC5B3C0032C4B3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 96008F5428BC5B3C0032C4B3 /* SDWebImage */; };
 		96008F5728BC89B30032C4B3 /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96008F5628BC89B20032C4B3 /* MemoDetailViewController.swift */; };
+		96008F5928BC994F0032C4B3 /* MemoWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96008F5828BC994E0032C4B3 /* MemoWriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		96008F4828BC52AE0032C4B3 /* MemoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCollectionViewController.swift; sourceTree = "<group>"; };
 		96008F4A28BC53140032C4B3 /* MemoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCollectionViewCell.swift; sourceTree = "<group>"; };
 		96008F5628BC89B20032C4B3 /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
+		96008F5828BC994E0032C4B3 /* MemoWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				96008F4828BC52AE0032C4B3 /* MemoCollectionViewController.swift */,
 				96008F4A28BC53140032C4B3 /* MemoCollectionViewCell.swift */,
 				96008F5628BC89B20032C4B3 /* MemoDetailViewController.swift */,
+				96008F5828BC994E0032C4B3 /* MemoWriteViewController.swift */,
 			);
 			path = LinkMemo;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				96008F3528BC4FC60032C4B3 /* AppDelegate.swift in Sources */,
 				96008F4928BC52AE0032C4B3 /* MemoCollectionViewController.swift in Sources */,
 				96008F3728BC4FC60032C4B3 /* SceneDelegate.swift in Sources */,
+				96008F5928BC994F0032C4B3 /* MemoWriteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

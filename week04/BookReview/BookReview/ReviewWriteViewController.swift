@@ -30,6 +30,7 @@ class ReviewWriteViewController: UIViewController {
             let alert = UIAlertController(title: "책리뷰", message: "모두 입력해주세요!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            return
         }
         
         var parameter = [

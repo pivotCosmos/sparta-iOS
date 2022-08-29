@@ -86,6 +86,11 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="모두의 링크 메모장" id="lT9-sg-kEY">
                         <barButtonItem key="backBarButtonItem" title="뒤로" id="QyQ-UE-net"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="gej-BF-Ng3">
+                            <connections>
+                                <segue destination="uep-ID-gIo" kind="show" id="8ww-Cq-wHq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="jc6-32-fTM" kind="show" identifier="gotoDetailPage" id="a6A-XQ-EXL"/>
@@ -93,6 +98,76 @@
                 </collectionViewController>
             </objects>
             <point key="canvasLocation" x="801" y="781"/>
+        </scene>
+        <!--작성하기-->
+        <scene sceneID="pI3-1b-mev">
+            <objects>
+                <viewController id="uep-ID-gIo" customClass="MemoWriteViewController" customModule="LinkMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KQw-vk-ENp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msV-Ut-DcV">
+                                <rect key="frame" x="24" y="117" width="27" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="URL을 넣어주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmX-rG-j9f">
+                                <rect key="frame" x="24" y="144" width="366" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="A53-j0-VWt"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="코멘트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyj-nB-B95">
+                                <rect key="frame" x="24" y="210" width="36.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="코멘트를 넣어주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-Et-8dj">
+                                <rect key="frame" x="24" y="237" width="366" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="WCq-zL-cec"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pTK-YS-h0X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gUw-Et-8dj" firstAttribute="top" secondItem="kyj-nB-B95" secondAttribute="bottom" constant="10" id="0MP-dN-n33"/>
+                            <constraint firstItem="pTK-YS-h0X" firstAttribute="trailing" secondItem="kmX-rG-j9f" secondAttribute="trailing" constant="24" id="2Ow-Mc-51j"/>
+                            <constraint firstItem="kyj-nB-B95" firstAttribute="leading" secondItem="pTK-YS-h0X" secondAttribute="leading" constant="24" id="6Uw-fb-7Si"/>
+                            <constraint firstItem="msV-Ut-DcV" firstAttribute="top" secondItem="pTK-YS-h0X" secondAttribute="top" constant="29" id="FGd-6p-q65"/>
+                            <constraint firstItem="kyj-nB-B95" firstAttribute="top" secondItem="kmX-rG-j9f" secondAttribute="bottom" constant="24" id="Kbs-1Q-eTL"/>
+                            <constraint firstItem="msV-Ut-DcV" firstAttribute="leading" secondItem="pTK-YS-h0X" secondAttribute="leading" constant="24" id="UCK-LI-TzB"/>
+                            <constraint firstItem="kmX-rG-j9f" firstAttribute="leading" secondItem="pTK-YS-h0X" secondAttribute="leading" constant="24" id="e8g-Oq-NhK"/>
+                            <constraint firstItem="gUw-Et-8dj" firstAttribute="leading" secondItem="pTK-YS-h0X" secondAttribute="leading" constant="24" id="elw-jK-EWi"/>
+                            <constraint firstItem="kmX-rG-j9f" firstAttribute="top" secondItem="msV-Ut-DcV" secondAttribute="bottom" constant="10" id="tAm-A8-zgP"/>
+                            <constraint firstItem="pTK-YS-h0X" firstAttribute="trailing" secondItem="gUw-Et-8dj" secondAttribute="trailing" constant="24" id="ty4-kw-O48"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="작성하기" id="xwz-BQ-OZb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="whK-LM-vGE">
+                            <connections>
+                                <action selector="doneButtonClicked:" destination="uep-ID-gIo" id="Fcy-j5-wIT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="commentTextField" destination="gUw-Et-8dj" id="rtS-0p-LoX"/>
+                        <outlet property="urlTextField" destination="kmX-rG-j9f" id="tts-l6-bLN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXa-fY-pTe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="781"/>
         </scene>
         <!--Memo Detail View Controller-->
         <scene sceneID="lSY-il-4tV">
@@ -174,7 +249,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1489.8550724637682" y="781.47321428571422"/>
+            <point key="canvasLocation" x="800" y="1457"/>
         </scene>
     </scenes>
     <resources>
