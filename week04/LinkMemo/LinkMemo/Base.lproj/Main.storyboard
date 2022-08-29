@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Af-P1-Nsa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LinkMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sB5-bM-M5H">
+            <objects>
+                <navigationController id="8Af-P1-Nsa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xVz-Yg-VMv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f4Z-nL-Vaw" kind="relationship" relationship="rootViewController" id="eGx-19-tUo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDV-v3-AFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="782"/>
+        </scene>
+        <!--모두의 링크 메모장-->
+        <scene sceneID="Sbg-10-pzs">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fj-Oj-bVO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <collectionViewController id="f4Z-nL-Vaw" customClass="MemoCollectionViewController" customModule="LinkMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ack-C6-Hvq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dDu-MY-j1B">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemoCell" id="zFT-zP-uSI" customClass="MemoCollectionViewCell" customModule="LinkMemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6fC-xF-WB4">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e4m-bH-nwI">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="e4m-bH-nwI" firstAttribute="top" secondItem="6fC-xF-WB4" secondAttribute="top" id="4dg-WV-Otc"/>
+                                        <constraint firstItem="e4m-bH-nwI" firstAttribute="leading" secondItem="6fC-xF-WB4" secondAttribute="leading" id="ETz-2V-wGC"/>
+                                        <constraint firstAttribute="trailing" secondItem="e4m-bH-nwI" secondAttribute="trailing" id="Rb3-Jj-ttX"/>
+                                        <constraint firstAttribute="bottom" secondItem="e4m-bH-nwI" secondAttribute="bottom" id="liV-D7-aAy"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="e4m-bH-nwI" id="A4m-C6-ASD"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="f4Z-nL-Vaw" id="j64-tK-H4H"/>
+                            <outlet property="delegate" destination="f4Z-nL-Vaw" id="1tN-0d-Za7"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="모두의 링크 메모장" id="lT9-sg-kEY">
+                        <barButtonItem key="backBarButtonItem" title="뒤로" id="QyQ-UE-net"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="jc6-32-fTM" kind="show" identifier="gotoDetailPage" id="a6A-XQ-EXL"/>
+                    </connections>
+                </collectionViewController>
+            </objects>
+            <point key="canvasLocation" x="801" y="781"/>
+        </scene>
+        <!--Memo Detail View Controller-->
+        <scene sceneID="lSY-il-4tV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIp-pA-Hmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="jc6-32-fTM" customClass="MemoDetailViewController" customModule="LinkMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="shW-RO-GYU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uRa-N0-Unm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="snL-F8-hIO"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="해당 링크에 요약글이 들어갑니다. 해당 링크에 요약글이 들어갑니다. 해당 링크에 요약글이 들어갑니다. 해당 링크에 요약글이 들어갑니다. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ytm-uq-GVi">
+                                <rect key="frame" x="24" y="537" width="366" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="wpQ-ck-Vah"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요약" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euy-VG-iyZ">
+                                <rect key="frame" x="24" y="512" width="24.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="해당 링크에 요약글이 들어갑니다. 해당 링크에 요약글이 들어갑니다. 해당 링크에 요약글이 들어갑니다. 해당 링크에 요약글이 들어갑니다. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G6H-tn-eme">
+                                <rect key="frame" x="23" y="626" width="366" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9IH-GF-RUg"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="코멘트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRh-NK-iPt">
+                                <rect key="frame" x="24" y="645" width="36.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HyD-sr-LcZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HyD-sr-LcZ" firstAttribute="trailing" secondItem="uRa-N0-Unm" secondAttribute="trailing" id="BXQ-JW-aIp"/>
+                            <constraint firstItem="fRh-NK-iPt" firstAttribute="top" secondItem="Ytm-uq-GVi" secondAttribute="bottom" constant="8" symbolic="YES" id="Bzd-5b-z7l"/>
+                            <constraint firstItem="euy-VG-iyZ" firstAttribute="top" secondItem="uRa-N0-Unm" secondAttribute="bottom" constant="24" id="D07-aC-Qml"/>
+                            <constraint firstItem="Ytm-uq-GVi" firstAttribute="top" secondItem="euy-VG-iyZ" secondAttribute="bottom" constant="8" symbolic="YES" id="M0c-mX-7lw"/>
+                            <constraint firstItem="uRa-N0-Unm" firstAttribute="leading" secondItem="HyD-sr-LcZ" secondAttribute="leading" id="OYL-OC-pzd"/>
+                            <constraint firstItem="HyD-sr-LcZ" firstAttribute="trailing" secondItem="Ytm-uq-GVi" secondAttribute="trailing" constant="24" id="OsC-u5-3Tz"/>
+                            <constraint firstItem="Ytm-uq-GVi" firstAttribute="leading" secondItem="HyD-sr-LcZ" secondAttribute="leading" constant="24" id="RdA-Ln-cjF"/>
+                            <constraint firstItem="fRh-NK-iPt" firstAttribute="leading" secondItem="HyD-sr-LcZ" secondAttribute="leading" constant="24" id="UPy-2j-3Zu"/>
+                            <constraint firstItem="euy-VG-iyZ" firstAttribute="leading" secondItem="HyD-sr-LcZ" secondAttribute="leading" constant="24" id="iDD-3J-Ba5"/>
+                            <constraint firstItem="HyD-sr-LcZ" firstAttribute="trailing" secondItem="G6H-tn-eme" secondAttribute="trailing" constant="24" id="ixA-tW-mUg"/>
+                            <constraint firstItem="G6H-tn-eme" firstAttribute="leading" secondItem="HyD-sr-LcZ" secondAttribute="leading" constant="24" id="mfh-xG-3gV"/>
+                            <constraint firstItem="G6H-tn-eme" firstAttribute="top" secondItem="fRh-NK-iPt" secondAttribute="bottom" constant="8" symbolic="YES" id="oXb-BX-Oq9"/>
+                            <constraint firstItem="uRa-N0-Unm" firstAttribute="top" secondItem="HyD-sr-LcZ" secondAttribute="top" id="rwq-37-6kO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JlU-Aw-tVs">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="link" catalog="system" id="BFc-NU-jFX">
+                            <connections>
+                                <action selector="linkButtonClicked:" destination="jc6-32-fTM" id="uZK-gW-jF8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="commentTextView" destination="G6H-tn-eme" id="N2x-kW-zAJ"/>
+                        <outlet property="contentTextView" destination="Ytm-uq-GVi" id="Pu9-O6-gTf"/>
+                        <outlet property="imageView" destination="uRa-N0-Unm" id="8jK-bw-0Mh"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1489.8550724637682" y="781.47321428571422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="link" catalog="system" width="128" height="122"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
