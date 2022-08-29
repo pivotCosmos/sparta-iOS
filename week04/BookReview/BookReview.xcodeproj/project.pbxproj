@@ -15,6 +15,7 @@
 		968456D928B4BFBE00744D55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968456D728B4BFBE00744D55 /* Main.storyboard */; };
 		968456DB28B4BFBF00744D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968456DA28B4BFBF00744D55 /* Assets.xcassets */; };
 		968456DE28B4BFBF00744D55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968456DC28B4BFBF00744D55 /* LaunchScreen.storyboard */; };
+		96A96CA728B704E9005AC700 /* ReviewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A96CA628B704E9005AC700 /* ReviewWriteViewController.swift */; };
 		96BD90C228B5B3F30041B0C7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 96BD90C128B5B3F30041B0C7 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		968456DA28B4BFBF00744D55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968456DD28B4BFBF00744D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		968456DF28B4BFBF00744D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96A96CA628B704E9005AC700 /* ReviewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				968456DC28B4BFBF00744D55 /* LaunchScreen.storyboard */,
 				968456DF28B4BFBF00744D55 /* Info.plist */,
 				96480DE228B5FE5700FC34A0 /* ReviewTableViewController.swift */,
+				96A96CA628B704E9005AC700 /* ReviewWriteViewController.swift */,
 			);
 			path = BookReview;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				968456D628B4BFBE00744D55 /* ViewController.swift in Sources */,
 				968456D228B4BFBE00744D55 /* AppDelegate.swift in Sources */,
+				96A96CA728B704E9005AC700 /* ReviewWriteViewController.swift in Sources */,
 				968456D428B4BFBE00744D55 /* SceneDelegate.swift in Sources */,
 				96480DE328B5FE5700FC34A0 /* ReviewTableViewController.swift in Sources */,
 			);
