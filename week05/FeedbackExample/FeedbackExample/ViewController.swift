@@ -15,8 +15,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonDidClick(_sender: Any) {
-        let impact = UIImpactFeedbackGenerator()
-        impact.impactOccurred()
+        /*let impact = UIImpactFeedbackGenerator()
+        impact.impactOccurred()*/
+        /*let selection = UISelectionFeedbackGenerator()
+        selection.selectionChanged()*/
+        let noti = UINotificationFeedbackGenerator()
+        noti.notificationOccurred(.success)
     }
 }
 
