@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Finger Start View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FingerStartViewController" customModule="FingerGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="손가락묶기 게임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBf-b5-QPD">
+                                <rect key="frame" x="128.5" y="194" width="157" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="textColor" name="Cream"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB0-SC-Jz2">
+                                <rect key="frame" x="160.5" y="624" width="93.5" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="시작하기">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <color key="baseForegroundColor" name="Peach"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Pdl-eJ-JBd" kind="presentation" id="Nho-JS-6Hc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QB0-SC-Jz2" secondAttribute="bottom" constant="200" id="Rkz-Nv-nem"/>
+                            <constraint firstItem="aBf-b5-QPD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="oUv-Wt-QLa"/>
+                            <constraint firstItem="aBf-b5-QPD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qxg-Wv-muh"/>
+                            <constraint firstItem="QB0-SC-Jz2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rWO-YR-dvk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="84"/>
+        </scene>
+        <!--Finger Game View Controller-->
+        <scene sceneID="Fbh-mg-ct4">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Pdl-eJ-JBd" customClass="FingerGameViewController" customModule="FingerGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rw6-X1-RaO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pO-ks-H4e">
+                                <rect key="frame" x="20" y="44" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="2YK-8Z-NQU"/>
+                                    <constraint firstAttribute="height" constant="40" id="jhh-z3-Wn5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                    <color key="baseForegroundColor" name="Cream"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="Pdl-eJ-JBd" eventType="touchUpInside" id="oDr-C1-7u2"/>
+                                </connections>
+                            </button>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AaW-7H-LOO" customClass="FingerGameView" customModule="FingerGame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gyY-Mo-cAt"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7pO-ks-H4e" firstAttribute="top" secondItem="gyY-Mo-cAt" secondAttribute="top" id="2GS-61-o8Z"/>
+                            <constraint firstItem="AaW-7H-LOO" firstAttribute="top" secondItem="7pO-ks-H4e" secondAttribute="bottom" id="EzS-r4-GmF"/>
+                            <constraint firstItem="AaW-7H-LOO" firstAttribute="trailing" secondItem="gyY-Mo-cAt" secondAttribute="trailing" id="FjF-g6-k4J"/>
+                            <constraint firstItem="AaW-7H-LOO" firstAttribute="leading" secondItem="gyY-Mo-cAt" secondAttribute="leading" id="VAy-cp-6XC"/>
+                            <constraint firstItem="7pO-ks-H4e" firstAttribute="leading" secondItem="gyY-Mo-cAt" secondAttribute="leading" constant="20" id="ZAK-Jn-fgt"/>
+                            <constraint firstItem="gyY-Mo-cAt" firstAttribute="bottom" secondItem="AaW-7H-LOO" secondAttribute="bottom" id="dN1-X9-cuv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fDz-Ht-xdu"/>
+                    <connections>
+                        <outlet property="gameView" destination="AaW-7H-LOO" id="R9X-SV-lOb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6a-Iy-lpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708.69565217391312" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="Cream">
+            <color red="1" green="0.96078431372549022" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Peach">
+            <color red="1" green="0.7686274509803922" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
