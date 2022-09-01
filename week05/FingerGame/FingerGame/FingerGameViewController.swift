@@ -9,15 +9,35 @@ import UIKit
 
 class FingerGameViewController: UIViewController {
 
-    @IBOutlet weak var gameView: UIView!
+    @IBOutlet weak var gameView: FingerGameView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        gameView.controller = self
     }
     
     @IBAction func closeButtonClicked(_ sender: Any) {
+    }
+    
+    var timer: Timer?
+    func touchCountDidChang() {
+        timer?.invalidate()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (t) in
+            
+            for roundView in self.gameView.touchToRoundView.values {
+                
+                let randomChoice = Bool.random()
+                
+                if randomChoice {
+                    roundView.backgroundColor = UIColor(named: "Cherry")
+                } else {
+                    roundView.backgroundColor = UIColor(named: "Cream")
+                }
+            }
+            
+        }
     }
     
     /*

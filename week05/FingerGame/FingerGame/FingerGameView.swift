@@ -9,6 +9,8 @@ import UIKit
 
 class FingerGameView: UIView {
 
+    weak var controller: FingerGameViewController?
+    
     var touchToRoundView: [UITouch: UIView] = [:]
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -21,6 +23,8 @@ class FingerGameView: UIView {
             
             self.touchToRoundView[touch] = view
             self.addSubview(view)
+            
+            self.controller?.touchCountDidChang()
         }
     }
     
@@ -28,6 +32,8 @@ class FingerGameView: UIView {
         for touch in touches {
             let view = self.touchToRoundView[touch]
             view?.center = touch.location(in: self)
+            
+            self.controller?.touchCountDidChang()
         }
     }
     
@@ -37,6 +43,9 @@ class FingerGameView: UIView {
             
             view?.removeFromSuperview()
             self.touchToRoundView.removeValue(forKey: touch)
+            
+            self.controller?.touchCountDidChang()
+            
         }
     }
     
@@ -46,6 +55,8 @@ class FingerGameView: UIView {
             
             view?.removeFromSuperview()
             self.touchToRoundView.removeValue(forKey: touch)
+            
+            self.controller?.touchCountDidChang()
         }
     }
 }
