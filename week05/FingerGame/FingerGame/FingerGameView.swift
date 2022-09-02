@@ -18,13 +18,13 @@ class FingerGameView: UIView {
             
             let view = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 80)) //모서리에 위치한 정사각형
             view.center = touch.location(in: self) //x,y(정사각형 위치)가 알아서 바뀐다
-            view.backgroundColor = UIColor(named: "Strawberry")
+            view.backgroundColor = UIColor(named: "Peach")
             view.layer.cornerRadius = 40 //80x80 정사각형을 반씩 깎아서 원으로 만든다
             
             self.touchToRoundView[touch] = view
             self.addSubview(view)
             
-            self.controller?.touchCountDidChang()
+            self.controller?.touchCountDidChange()
         }
     }
     
@@ -33,7 +33,7 @@ class FingerGameView: UIView {
             let view = self.touchToRoundView[touch]
             view?.center = touch.location(in: self)
             
-            self.controller?.touchCountDidChang()
+            self.controller?.touchCountDidChange()
         }
     }
     
@@ -44,7 +44,7 @@ class FingerGameView: UIView {
             view?.removeFromSuperview()
             self.touchToRoundView.removeValue(forKey: touch)
             
-            self.controller?.touchCountDidChang()
+            self.controller?.touchCountDidChange()
             
         }
     }
@@ -56,7 +56,7 @@ class FingerGameView: UIView {
             view?.removeFromSuperview()
             self.touchToRoundView.removeValue(forKey: touch)
             
-            self.controller?.touchCountDidChang()
+            self.controller?.touchCountDidChange()
         }
     }
 }

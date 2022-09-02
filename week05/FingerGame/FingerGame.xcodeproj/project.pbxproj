@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0CA323C9046B6AF165D7D3 /* Pods_FingerGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C619ECF35D253C800DD9EE /* Pods_FingerGame.framework */; };
 		9619F8BA28C03B5A00734999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619F8B928C03B5A00734999 /* AppDelegate.swift */; };
 		9619F8BC28C03B5A00734999 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619F8BB28C03B5A00734999 /* SceneDelegate.swift */; };
 		9619F8BE28C03B5A00734999 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619F8BD28C03B5A00734999 /* ViewController.swift */; };
@@ -16,9 +17,11 @@
 		9619F8CE28C03E0B00734999 /* FingerStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619F8CD28C03E0B00734999 /* FingerStartViewController.swift */; };
 		9619F8D028C03E2100734999 /* FingerGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619F8CF28C03E2100734999 /* FingerGameViewController.swift */; };
 		9619F8D228C04A3600734999 /* FingerGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619F8D128C04A3600734999 /* FingerGameView.swift */; };
+		96B44E6B28C1A5BE00BB9093 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96B44E6A28C1A5BE00BB9093 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1190A59E3D886B7FD8E0F73F /* Pods-FingerGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FingerGame.release.xcconfig"; path = "Target Support Files/Pods-FingerGame/Pods-FingerGame.release.xcconfig"; sourceTree = "<group>"; };
 		9619F8B628C03B5A00734999 /* FingerGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingerGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9619F8B928C03B5A00734999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9619F8BB28C03B5A00734999 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		9619F8CD28C03E0B00734999 /* FingerStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerStartViewController.swift; sourceTree = "<group>"; };
 		9619F8CF28C03E2100734999 /* FingerGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerGameViewController.swift; sourceTree = "<group>"; };
 		9619F8D128C04A3600734999 /* FingerGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerGameView.swift; sourceTree = "<group>"; };
+		96B44E6A28C1A5BE00BB9093 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B6C619ECF35D253C800DD9EE /* Pods_FingerGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FingerGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A5E8D9A88AD3E87EF89B79 /* Pods-FingerGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FingerGame.debug.xcconfig"; path = "Target Support Files/Pods-FingerGame/Pods-FingerGame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E0CA323C9046B6AF165D7D3 /* Pods_FingerGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		154F9FC913C2ADF597AE5F2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6C619ECF35D253C800DD9EE /* Pods_FingerGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9619F8AD28C03B5A00734999 = {
 			isa = PBXGroup;
 			children = (
 				9619F8B828C03B5A00734999 /* FingerGame */,
 				9619F8B728C03B5A00734999 /* Products */,
+				D257B6E1B2BF20C776AEE416 /* Pods */,
+				154F9FC913C2ADF597AE5F2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +89,18 @@
 				9619F8CD28C03E0B00734999 /* FingerStartViewController.swift */,
 				9619F8CF28C03E2100734999 /* FingerGameViewController.swift */,
 				9619F8D128C04A3600734999 /* FingerGameView.swift */,
+				96B44E6A28C1A5BE00BB9093 /* GoogleService-Info.plist */,
 			);
 			path = FingerGame;
+			sourceTree = "<group>";
+		};
+		D257B6E1B2BF20C776AEE416 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9A5E8D9A88AD3E87EF89B79 /* Pods-FingerGame.debug.xcconfig */,
+				1190A59E3D886B7FD8E0F73F /* Pods-FingerGame.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9619F8CA28C03B5D00734999 /* Build configuration list for PBXNativeTarget "FingerGame" */;
 			buildPhases = (
+				7E92DBD7A2013639309FFFEA /* [CP] Check Pods Manifest.lock */,
 				9619F8B228C03B5A00734999 /* Sources */,
 				9619F8B328C03B5A00734999 /* Frameworks */,
 				9619F8B428C03B5A00734999 /* Resources */,
+				3851674AB4A863255FAC231C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,12 +164,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				9619F8C628C03B5D00734999 /* LaunchScreen.storyboard in Resources */,
+				96B44E6B28C1A5BE00BB9093 /* GoogleService-Info.plist in Resources */,
 				9619F8C328C03B5D00734999 /* Assets.xcassets in Resources */,
 				9619F8C128C03B5A00734999 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3851674AB4A863255FAC231C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FingerGame/Pods-FingerGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FingerGame/Pods-FingerGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FingerGame/Pods-FingerGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E92DBD7A2013639309FFFEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FingerGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9619F8B228C03B5A00734999 /* Sources */ = {
@@ -294,6 +366,7 @@
 		};
 		9619F8CB28C03B5D00734999 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9A5E8D9A88AD3E87EF89B79 /* Pods-FingerGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,6 +395,7 @@
 		};
 		9619F8CC28C03B5D00734999 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1190A59E3D886B7FD8E0F73F /* Pods-FingerGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

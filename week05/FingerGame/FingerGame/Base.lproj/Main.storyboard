@@ -74,21 +74,30 @@
                                 <rect key="frame" x="0.0" y="84" width="414" height="778"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myd-cI-zIg">
+                                <rect key="frame" x="207" y="64" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gyY-Mo-cAt"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7pO-ks-H4e" firstAttribute="top" secondItem="gyY-Mo-cAt" secondAttribute="top" id="2GS-61-o8Z"/>
+                            <constraint firstItem="Myd-cI-zIg" firstAttribute="centerY" secondItem="7pO-ks-H4e" secondAttribute="centerY" id="3bD-Tf-PyI"/>
                             <constraint firstItem="AaW-7H-LOO" firstAttribute="top" secondItem="7pO-ks-H4e" secondAttribute="bottom" id="EzS-r4-GmF"/>
                             <constraint firstItem="AaW-7H-LOO" firstAttribute="trailing" secondItem="gyY-Mo-cAt" secondAttribute="trailing" id="FjF-g6-k4J"/>
                             <constraint firstItem="AaW-7H-LOO" firstAttribute="leading" secondItem="gyY-Mo-cAt" secondAttribute="leading" id="VAy-cp-6XC"/>
                             <constraint firstItem="7pO-ks-H4e" firstAttribute="leading" secondItem="gyY-Mo-cAt" secondAttribute="leading" constant="20" id="ZAK-Jn-fgt"/>
                             <constraint firstItem="gyY-Mo-cAt" firstAttribute="bottom" secondItem="AaW-7H-LOO" secondAttribute="bottom" id="dN1-X9-cuv"/>
+                            <constraint firstItem="Myd-cI-zIg" firstAttribute="centerX" secondItem="Rw6-X1-RaO" secondAttribute="centerX" id="p3q-Tm-ydK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fDz-Ht-xdu"/>
                     <connections>
                         <outlet property="gameView" destination="AaW-7H-LOO" id="R9X-SV-lOb"/>
+                        <outlet property="secondsLabel" destination="Myd-cI-zIg" id="7tS-Pi-IOv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6a-Iy-lpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
