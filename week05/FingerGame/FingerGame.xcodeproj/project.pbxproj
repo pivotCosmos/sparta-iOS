@@ -375,6 +375,8 @@
 				DEVELOPMENT_TEAM = 96C79ZKQ4Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FingerGame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "손가락묶기 게임";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "전면광고를 위해 개인정보를 이용합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -404,6 +406,8 @@
 				DEVELOPMENT_TEAM = 96C79ZKQ4Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FingerGame/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "손가락묶기 게임";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "전면광고를 위해 개인정보를 이용합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

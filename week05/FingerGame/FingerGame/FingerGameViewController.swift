@@ -54,22 +54,16 @@ class FingerGameViewController: UIViewController {
         
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (t) in
             
-            for roundView in self.gameView.touchToRoundView.values {
+            let roundView = self.gameView.touchToRoundView.values.randomElement()!
                 
-                let randomChoice = Bool.random()
                 
-                UIView.animate(withDuration: 1){
-                    if randomChoice {
-                        roundView.backgroundColor = UIColor(named: "Cherry")
-                    } else {
-                        roundView.backgroundColor = UIColor(named: "Strawberry")
-                    }
-                    
-                    let center = roundView.center // center는 struct이라서 참조주소가 아니라 값을 직접 넘겨준다. 따라서 이후에 roundView.center가 바뀌더라도 영향이 없다.
-                    roundView.frame.size = CGSize(width: 120, height: 120)
-                    roundView.layer.cornerRadius = 60
-                    roundView.center = center
-                }
+            UIView.animate(withDuration: 1){
+                roundView.backgroundColor = UIColor(named: "Cherry")
+                
+                let center = roundView.center // center는 struct이라서 참조주소가 아니라 값을 직접 넘겨준다. 따라서 이후에 roundView.center가 바뀌더라도 영향이 없다.
+                roundView.frame.size = CGSize(width: 120, height: 120)
+                roundView.layer.cornerRadius = 60
+                roundView.center = center
             }
             
             Analytics.logEvent("GameEnd", parameters: ["touchCOunt":
